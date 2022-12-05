@@ -13,6 +13,7 @@ interface User {
 }
 
 const user: User = {
+  id: "asdf",
   firstName: "asdf",
   lastName: "asdf",
 };

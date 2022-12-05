@@ -8,7 +8,7 @@ type User = {
   firstName: string;
 };
 
-const example = (user: BaseUser) => {};
+const example = (user: UserUnionType) => {};
 
 // UserIntersectionType contains all types from User AND BaseUser
 type UserIntersectionType = User & BaseUser;
