@@ -1,6 +1,10 @@
 export const bla = "";
 
-interface User {
+interface BaseUser {
+  id: string;
+}
+
+interface User extends BaseUser {
   firstName: string;
 }
 
