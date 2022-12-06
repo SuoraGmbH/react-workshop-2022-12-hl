@@ -15,6 +15,14 @@ function App() {
     console.log(timeEntry);
   };
 
+  // Create or modify the Props interface of TimeEntryForm
+  // Add a new prop to TimeEntryForm: onAddTimeEntry
+  // The type of the prop is a function that receives the "event payload" and returns void
+  // The event payload should be a TimeEntry
+  //
+  // The new event handler should be called when the form is submitted
+  // Move handleSubmit inside of the TimeEntryForm for this
+
   return (
     <div>
       <h1>Christian</h1>
