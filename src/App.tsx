@@ -21,7 +21,7 @@ function App() {
   // The event payload should be a TimeEntry
   //
   // The new event handler should be called when the form is submitted
-  // Move handleSubmit inside of the TimeEntryForm for this
+  // Move handleSubmit inside the TimeEntryForm for this
 
   return (
     <div>
