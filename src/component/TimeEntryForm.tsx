@@ -1,12 +1,22 @@
 import React from "react";
-const handleSubmit: React.FormEventHandler<HTMLFormElement> = (event) => {
-  event.preventDefault();
-  console.log("Hello World");
-};
+import { TimeEntry } from "../domain/TimeEntry";
 
-interface Props {}
+interface Props {
+  onAddTimeEntry: (timeEntry: TimeEntry) => void;
+}
 
-const TimeEntryForm: React.FunctionComponent<Props> = ({}) => {
+const TimeEntryForm: React.FunctionComponent<Props> = ({ onAddTimeEntry }) => {
+  const handleSubmit: React.FormEventHandler<HTMLFormElement> = (event) => {
+    event.preventDefault();
+
+    onAddTimeEntry({
+      comment: "asduhodiaus",
+      id: "asndodasoidas",
+      start: new Date(),
+      end: new Date(),
+    });
+  };
+
   return (
     <form onSubmit={handleSubmit}>
       <button>Submit</button>
