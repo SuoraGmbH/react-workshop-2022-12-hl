@@ -11,10 +11,15 @@ function App() {
     end: new Date(),
   };
 
+  const handleAddTimeEntry = (timeEntry: TimeEntry) => {
+    console.log(timeEntry);
+  };
+
   return (
     <div>
       <h1>Christian</h1>
       <TimeEntryView timeEntry={timeEntry} />
+      <TimeEntryForm onAddTimeEntry={handleAddTimeEntry} />
       <TimeEntryForm onSubmitButtonClick={console.log} />
     </div>
   );
