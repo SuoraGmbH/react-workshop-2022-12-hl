@@ -13,10 +13,16 @@ function handleSubmitAsFunction(event: React.FormEvent<HTMLFormElement>) {
   // console.log(this);
 }
 
-const TimeEntryForm: React.FunctionComponent = () => {
+interface Props {
+  onSubmitButtonClick?: React.MouseEventHandler<HTMLButtonElement>;
+}
+
+const TimeEntryForm: React.FunctionComponent<Props> = ({
+  onSubmitButtonClick,
+}) => {
   return (
     <form onSubmit={handleSubmit}>
-      <button>Submit</button>
+      <button onClick={onSubmitButtonClick}>Submit</button>
     </form>
   );
 };

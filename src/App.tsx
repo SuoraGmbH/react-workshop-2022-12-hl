@@ -15,7 +15,7 @@ function App() {
     <div>
       <h1>Christian</h1>
       <TimeEntryView timeEntry={timeEntry} />
-      <TimeEntryForm />
+      <TimeEntryForm onSubmitButtonClick={console.log} />
     </div>
   );
 }
