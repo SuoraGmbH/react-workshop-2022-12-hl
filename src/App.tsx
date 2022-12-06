@@ -1,6 +1,7 @@
 import React from "react";
 import TimeEntryView from "./component/TimeEntryView";
 import { TimeEntry } from "./domain/TimeEntry";
+import TimeEntryForm from "./component/TimeEntryForm";
 
 function App() {
   const timeEntry: TimeEntry = {
@@ -14,6 +15,7 @@ function App() {
     <div>
       <h1>Christian</h1>
       <TimeEntryView timeEntry={timeEntry} />
+      <TimeEntryForm />
     </div>
   );
 }
