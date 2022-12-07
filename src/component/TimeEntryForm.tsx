@@ -4,10 +4,11 @@ import { TimeEntry } from "../domain/TimeEntry";
 interface Props {
   onAddTimeEntry: (timeEntry: TimeEntry) => void;
 }
-
 const TimeEntryForm: React.FunctionComponent<Props> = ({ onAddTimeEntry }) => {
+  const [inputText, setInputText] = useState("");
+
   const handleChange: React.ChangeEventHandler<HTMLInputElement> = (event) => {
-    console.log(event.target.value);
+    setInputText(event.target.value);
   };
 
   const handleSubmit: React.FormEventHandler<HTMLFormElement> = (event) => {
@@ -27,7 +28,7 @@ const TimeEntryForm: React.FunctionComponent<Props> = ({ onAddTimeEntry }) => {
         Comment
         <input onChange={handleChange} />
       </label>
-      {/** Print the current Comment of the text box here */}
+      {inputText}
 
       <button>Submit</button>
     </form>
