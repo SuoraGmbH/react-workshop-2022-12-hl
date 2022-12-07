@@ -8,7 +8,9 @@ const TimeEntryForm: React.FunctionComponent<Props> = ({ onAddTimeEntry }) => {
   const [inputText, setInputText] = useState("");
 
   const handleChange: React.ChangeEventHandler<HTMLInputElement> = (event) => {
-    setInputText(event.target.value);
+    // strip numbers from the value
+    const value = event.target.value.replace(/\d/g, "");
+    setInputText(value);
   };
 
   const handleSubmit: React.FormEventHandler<HTMLFormElement> = (event) => {
@@ -21,13 +23,14 @@ const TimeEntryForm: React.FunctionComponent<Props> = ({ onAddTimeEntry }) => {
       start: new Date(),
       end: new Date(),
     });
+    setInputText("");
   };
 
   return (
     <form onSubmit={handleSubmit}>
       <label>
         Comment
-        <input onChange={handleChange} />
+        <input onChange={handleChange} value={inputText} />
       </label>
       {inputText}
 
