@@ -29,17 +29,9 @@ function App() {
 
   return (
     <div>
-      <ToggleButtonWithStringState />
-      <ToggleButtonWithBooleanState />
-      <h1>Christian</h1>
-      <TimeEntryView timeEntry={timeEntry} />
       <TimeEntryForm onAddTimeEntry={handleAddTimeEntry} />
+      <hr />
       <TimeEntryList />
-      <Counter />
-      <Counter />
-      <Counter />
-      <Counter />
-      <Counter />
     </div>
   );
 }
