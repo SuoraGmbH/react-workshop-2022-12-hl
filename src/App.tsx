@@ -4,7 +4,7 @@ import TimeEntryForm from "./component/TimeEntryForm";
 import TimeEntryList from "./component/TimeEntryList";
 
 function App() {
-  const [timeEntries, setTimeEntries] = useState<TimeEntry[]>([]);
+  const [timeEntries, setTimeEntries] = useState<readonly TimeEntry[]>([]);
 
   const handleAddTimeEntry = (timeEntry: TimeEntry) => {
     setTimeEntries((prevTimeEntries) => [...prevTimeEntries, timeEntry]);
