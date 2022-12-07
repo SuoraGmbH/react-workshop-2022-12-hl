@@ -15,8 +15,9 @@ const TimeEntryForm: React.FunctionComponent<Props> = ({ onAddTimeEntry }) => {
     event.preventDefault();
 
     onAddTimeEntry({
-      comment: "asduhodiaus",
-      id: "asndodasoidas",
+      comment: inputText,
+      // @ts-ignore
+      id: crypto.randomUUID(),
       start: new Date(),
       end: new Date(),
     });
