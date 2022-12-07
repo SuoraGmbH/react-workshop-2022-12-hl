@@ -3,6 +3,7 @@ import TimeEntryView from "./component/TimeEntryView";
 import { TimeEntry } from "./domain/TimeEntry";
 import TimeEntryForm from "./component/TimeEntryForm";
 import TimeEntryList from "./component/TimeEntryList";
+import Counter from "./component/Counter";
 
 function App() {
   const timeEntry: TimeEntry = {
@@ -30,6 +31,11 @@ function App() {
       <TimeEntryView timeEntry={timeEntry} />
       <TimeEntryForm onAddTimeEntry={handleAddTimeEntry} />
       <TimeEntryList />
+      <Counter />
+      <Counter />
+      <Counter />
+      <Counter />
+      <Counter />
     </div>
   );
 }
