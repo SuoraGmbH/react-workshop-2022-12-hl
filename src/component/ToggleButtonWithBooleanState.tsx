@@ -4,7 +4,14 @@ const ToggleButtonWithBooleanState: React.FunctionComponent = () => {
   const [toggle, setToggle] = useState(true);
 
   const handleClick = () => {
-    setToggle(!toggle);
+    console.log("before", toggle);
+    // setToggle(toggle => !toggle);
+    setToggle(function (prevToggle) {
+      const newToggle = !prevToggle;
+
+      return newToggle;
+    });
+    console.log("after", toggle);
   };
 
   return (
