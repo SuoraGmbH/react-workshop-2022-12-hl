@@ -4,6 +4,7 @@ import { TimeEntry } from "./domain/TimeEntry";
 import TimeEntryForm from "./component/TimeEntryForm";
 import TimeEntryList from "./component/TimeEntryList";
 import Counter from "./component/Counter";
+import ToggleButtonWithStringState from "./component/ToggleButtonWithStringState";
 
 function App() {
   const timeEntry: TimeEntry = {
@@ -27,6 +28,7 @@ function App() {
 
   return (
     <div>
+      <ToggleButtonWithStringState />
       <h1>Christian</h1>
       <TimeEntryView timeEntry={timeEntry} />
       <TimeEntryForm onAddTimeEntry={handleAddTimeEntry} />
