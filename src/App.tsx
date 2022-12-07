@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import TimeEntryView from "./component/TimeEntryView";
 import { TimeEntry } from "./domain/TimeEntry";
 import TimeEntryForm from "./component/TimeEntryForm";
@@ -8,6 +8,9 @@ import ToggleButtonWithStringState from "./component/ToggleButtonWithStringState
 import ToggleButtonWithBooleanState from "./component/ToggleButtonWithBooleanState";
 
 function App() {
+  const [timeEntries, setTimeEntries] = useState<TimeEntry[]>([]);
+  // setTimeEntries([...timeEntries, newTimeEntry]);
+
   const timeEntry: TimeEntry = {
     comment: "React Training",
     id: "husd9auhdaso8jdu80duj08",
