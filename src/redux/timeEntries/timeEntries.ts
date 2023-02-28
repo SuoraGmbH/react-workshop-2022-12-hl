@@ -1,7 +1,21 @@
-const initialState = {};
+import { TimeEntry } from "../../domain/TimeEntry";
 
-const timeEntries = (state = initialState, action: any) => {
-  return state;
+const initialState: TimeEntry[] = [];
+
+const timeEntriesReducer = (state = initialState, action: any) => {
+  switch (action.type) {
+    case "timeEntry/add":
+      return [...state, action.timeEntry];
+    default:
+      return state;
+  }
 };
 
-export default timeEntries;
+export const addTimeEntry = (timeEntry: TimeEntry) => {
+  return {
+    type: "timeEntry/add",
+    timeEntry: timeEntry,
+  };
+};
+
+export default timeEntriesReducer;
