@@ -1,6 +1,6 @@
 import React from "react";
 import { useAppDispatch, useAppSelector } from "../redux/store";
-import { increment } from "../redux/counterSlice";
+import { increment, incrementBy } from "../redux/counterSlice";
 
 const CounterFromRedux: React.FunctionComponent = () => {
   const count = useAppSelector((state) => state.count.count);
@@ -9,9 +9,14 @@ const CounterFromRedux: React.FunctionComponent = () => {
     dispatch(increment());
   };
 
+  const handleBigTimeClick = () => {
+    dispatch(incrementBy(10));
+  };
+
   return (
     <div>
       <button onClick={handleClick}>Increment</button>
+      <button onClick={handleBigTimeClick}>Increment big time!</button>
       Current Count: {count}
     </div>
   );
