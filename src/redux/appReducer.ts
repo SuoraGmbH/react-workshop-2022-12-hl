@@ -5,4 +5,6 @@ const appReducer = combineReducers({
   timeEntries: timeEntriesReducer,
 });
 
+export type AppState = ReturnType<typeof appReducer>;
+
 export default appReducer;
