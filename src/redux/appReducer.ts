@@ -1,5 +1,5 @@
 import { combineReducers } from "redux";
-import timeEntries from "./todos/timeEntries";
+import timeEntries from "./timeEntries/timeEntries";
 
 const appReducer = combineReducers({
   timeEntries: timeEntries,
