@@ -1,7 +1,7 @@
 const initialState = {};
 
-const todosReducer = (state = initialState, action: any) => {
+const timeEntries = (state = initialState, action: any) => {
   return state;
 };
 
-export default todosReducer;
+export default timeEntries;
