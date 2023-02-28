@@ -1,8 +1,8 @@
 import { combineReducers } from "redux";
-import todosReducer from "./todos/todosReducer";
+import timeEntries from "./todos/timeEntries";
 
 const appReducer = combineReducers({
-  todos: todosReducer,
+  timeEntries: timeEntries,
 });
 
 export default appReducer;
