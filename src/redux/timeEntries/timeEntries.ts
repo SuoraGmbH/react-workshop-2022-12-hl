@@ -2,7 +2,22 @@ import { TimeEntry } from "../../domain/TimeEntry";
 
 const initialState: TimeEntry[] = [];
 
-const timeEntriesReducer = (state = initialState, action: any) => {
+type TimeEntryAddAction = {
+  // Union Discriminator
+  type: "timeEntry/add";
+  timeEntry: TimeEntry;
+};
+
+type InitAction = {
+  type: "@@INIT";
+};
+
+type AppAction = InitAction | TimeEntryAddAction;
+
+const timeEntriesReducer = (
+  state = initialState,
+  action: AppAction
+): TimeEntry[] => {
   switch (action.type) {
     case "timeEntry/add":
       return [...state, action.timeEntry];
