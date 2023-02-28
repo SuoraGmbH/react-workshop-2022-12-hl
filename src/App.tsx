@@ -5,6 +5,8 @@ import TimeEntryList from "./component/TimeEntryList";
 import GithubRepoStats from "./component/GithubRepoStats";
 import { Provider } from "react-redux";
 import { createStore } from "./redux/store";
+import Counter from "./component/Counter";
+import CounterFromRedux from "./component/CounterFromRedux";
 
 const store = createStore();
 
@@ -23,6 +25,11 @@ function App() {
         <hr />
         <TimeEntryList timeEntries={timeEntries} />
         <GithubRepoStats repoName="facebook/react" />
+        <hr />
+        <CounterFromRedux />
+        <CounterFromRedux />
+        <CounterFromRedux />
+        <CounterFromRedux />
       </div>
     </Provider>
   );
