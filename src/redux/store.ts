@@ -1,6 +1,7 @@
 import { configureStore } from "@reduxjs/toolkit";
 import { TypedUseSelectorHook, useDispatch, useSelector } from "react-redux";
 import counterSlice from "./counterSlice";
+import timeEntriesSlice from "./timeEntriesSlice";
 
 export const createStore = () => {
   return configureStore({
@@ -8,6 +9,7 @@ export const createStore = () => {
       example: () => ({}),
       example2: () => ({}),
       count: counterSlice,
+      timeEntries: timeEntriesSlice,
     },
   });
 };

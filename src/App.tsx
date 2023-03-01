@@ -7,6 +7,8 @@ import { Provider } from "react-redux";
 import { createStore } from "./redux/store";
 import Counter from "./component/Counter";
 import CounterFromRedux from "./component/CounterFromRedux";
+import TimeEntryFormWithRedux from "./component/TimeEntryFormWithRedux";
+import TimeEntryListWithRedux from "./component/TimeEntryListWithRedux";
 
 const store = createStore();
 
@@ -30,6 +32,9 @@ function App() {
         <CounterFromRedux />
         <CounterFromRedux />
         <CounterFromRedux />
+        <hr />
+        <TimeEntryFormWithRedux />
+        <TimeEntryListWithRedux />
       </div>
     </Provider>
   );
